@@ -32,7 +32,7 @@ body {
   --color-primary: #5bab34;
   --color-primary-dark: #529a2f;
   --color-primary-light: #7cbc5d;
-  --color-background: #f9f9f9;
+  --color-background: #f5f5f5;
   --color-background-footer: #f5f5f5;
   --title-md: 20px;
   --title-md: 22px;
@@ -108,9 +108,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -120,10 +120,40 @@ body {
 
 @media (min-width: 576px) {
   .nav__list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+.nav__list li:not(:last-child) {
+  margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .nav__list li:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+@media (max-width: 575px) {
+  .nav__list li {
+    padding: 15px 20px;
+    width: 100%;
+  }
+  .nav__list li:not(:last-child) {
+    margin-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+@media (min-width: 576px) {
+  .nav__list li[name="signup--link"] {
+    display: none;
   }
 }
 
@@ -132,6 +162,80 @@ body {
   font-size: var(--text-link);
   font-weight: 500;
   text-decoration: none;
+}
+
+.nav__list--btn[name="login"] {
+  margin-right: 15px;
+}
+
+.nav__list--btn[name="login"]:link, .nav__list--btn[name="login"]:visited {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 6px 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.nav__list--btn[name="login"]:hover, .nav__list--btn[name="login"]:active {
+  color: var(--color-primary-dark);
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+          box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+}
+
+@media (min-width: 576px) {
+  .nav__list--btn[name="login"]:link, .nav__list--btn[name="login"]:visited {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 6px 24px;
+    text-decoration: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    color: var(--color-primary-dark);
+    background-color: #fff;
+    -webkit-box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+            box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+  }
+  .nav__list--btn[name="login"]:hover, .nav__list--btn[name="login"]:active {
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+}
+
+.nav__list--btn[name="signup"]:link, .nav__list--btn[name="signup"]:visited {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 6px 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.nav__list--btn[name="signup"]:hover, .nav__list--btn[name="signup"]:active {
+  color: var(--color-primary-dark);
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+          box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+}
+
+@media (max-width: 575px) {
+  .nav__list--btn[name="signup"] {
+    display: none;
+  }
 }
 
 .nav__btn {
@@ -158,25 +262,16 @@ body {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .nav {
     background-color: white;
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
-    width: 70vw;
-    height: 100vh;
+    width: 55vw;
+    height: calc(100vh - 80px);
     -webkit-transform: translateX(-100vw);
             transform: translateX(-100vw);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     opacity: 0;
     pointer-events: none;
     z-index: 9;
@@ -185,9 +280,6 @@ body {
 }
 
 .nav-open .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   opacity: 1;
   pointer-events: auto;
   visibility: visible;

@@ -1,0 +1,43 @@
+@mixin btn {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 6px 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s;
+}
+
+@mixin btn--green {
+  &:link,
+  &:visited {
+    @include btn;
+
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+
+  &:hover,
+  &:active {
+    color: var(--color-primary-dark);
+    background-color: #fff;
+    box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+  }
+}
+
+@mixin btn--white {
+  &:link,
+  &:visited {
+    @include btn;
+
+    color: var(--color-primary-dark);
+    background-color: #fff;
+    box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+  }
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: var(--color-primary);
+  }
+}

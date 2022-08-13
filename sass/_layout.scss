@@ -47,12 +47,38 @@
 .nav {
   &__list {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     list-style: none;
     flex-direction: column;
 
     @include sm {
+      align-items: center;
       flex-direction: row;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 15px;
+
+        @include md {
+          margin-right: 35px;
+        }
+      }
+      @media (max-width: 575px) {
+        padding: 15px 20px;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-right: 0;
+          border-bottom: 1px solid #e5e5e5;
+        }
+      }
+
+      &[name="signup--link"] {
+        @include sm {
+          display: none;
+        }
+      }
     }
 
     &--link {
@@ -62,6 +88,24 @@
         font-size: var(--text-link);
         font-weight: 500;
         text-decoration: none;
+      }
+    }
+
+    &--btn {
+      &[name="login"] {
+        @include btn--green;
+        margin-right: 15px;
+
+        @include sm {
+          @include btn--white;
+        }
+      }
+
+      &[name="signup"] {
+        @include btn--green;
+        @media (max-width: 575px) {
+          display: none;
+        }
       }
     }
   }
@@ -88,18 +132,14 @@
     }
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 575px) {
     background-color: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
-    width: 70vw;
-    height: 100vh;
+    width: 55vw;
+    height: calc(100vh - 80px);
     transform: translateX(-100vw);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 0;
     pointer-events: none;
     z-index: 9;
@@ -108,7 +148,6 @@
 
   &-open {
     .nav {
-      display: flex;
       opacity: 1;
       pointer-events: auto;
       visibility: visible;
