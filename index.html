@@ -12,18 +12,40 @@
       rel="stylesheet"
     />
 
+    <script defer src="js/main.js"></script>
+
     <link rel="stylesheet" href="sass/main.css" />
 
     <title>Nutrifolio</title>
   </head>
   <body>
     <header class="header">
-      <div class="brand">
-        <img src="images/icon.svg" class="brand_logo" />
-        <p class="brand_name">Nutrifolio</p>
-      </div>
-
-      <nav></nav>
+      <button class="nav__btn">
+        <img
+          class="nav__btn--icon"
+          src="images/menu.svg"
+          alt="menu icon"
+          name="menu"
+        />
+        <img
+          class="nav__btn--icon"
+          src="images/close.svg"
+          alt="close menu icon"
+          name="close"
+        />
+      </button>
+      <a href="index.html" class="brand">
+        <img src="images/icon.svg" class="brand__logo" />
+        <p class="brand__name">Nutrifolio</p>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="link nav__list--link" href="index.html">Home</a></li>
+          <li>
+            <a class="link nav__list--link" href="about.html">About us</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   </body>
 </html>

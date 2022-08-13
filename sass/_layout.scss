@@ -1,0 +1,133 @@
+/***********************/
+/* HEADER */
+/***********************/
+
+.header {
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+  padding: 0 20px;
+  background-color: var(--color-background);
+
+  @include sm {
+    justify-content: space-between;
+  }
+}
+
+.brand {
+  text-decoration: none;
+  z-index: 99;
+
+  &__logo {
+    display: none;
+
+    @include sm {
+      display: block;
+      height: 28px;
+      margin-right: 6px;
+    }
+  }
+
+  &__name {
+    color: var(--color-primary);
+    font-size: var(--text-logo);
+    font-weight: 500;
+  }
+
+  @include sm {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/***********************/
+/* NAVIGATION */
+/***********************/
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+    }
+
+    &--link {
+      &:link,
+      &:visited {
+        color: var(--color-text);
+        font-size: var(--text-link);
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 29px;
+    height: 29px;
+    border: none;
+    margin-right: 15px;
+    background-color: transparent;
+    z-index: 99;
+
+    &--icon {
+      width: 29px;
+      height: 29px;
+
+      &[name="close"] {
+        display: none;
+      }
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    transform: translateX(-100vw);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    visibility: hidden;
+  }
+
+  &-open {
+    .nav {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .nav__btn--icon {
+      &[name="close"] {
+        display: block;
+      }
+
+      &[name="menu"] {
+        display: none;
+      }
+    }
+
+    .main-nav .nav-list .nav-list__link:link,
+    .main-nav .nav-list .nav-list__link:visited {
+      color: var(--primary-text-color);
+    }
+  }
+}

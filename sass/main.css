@@ -1,1 +1,210 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+:root {
+  --color-text: #212529;
+  --color-primary: #5bab34;
+  --color-primary-dark: #529a2f;
+  --color-primary-light: #7cbc5d;
+  --color-background: #f9f9f9;
+  --color-background-footer: #f5f5f5;
+  --title-md: 20px;
+  --title-md: 22px;
+  --title-section: 14px;
+  --text-md: 16px;
+  --text-sm: 14px;
+  --text-link: 16px;
+  --text-placeholder: 18px;
+  --text-logo: 22px;
+}
+
+/***********************/
+/* HEADER */
+/***********************/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: var(--color-background);
+}
+
+@media (min-width: 576px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.brand {
+  text-decoration: none;
+  z-index: 99;
+}
+
+.brand__logo {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .brand__logo {
+    display: block;
+    height: 28px;
+    margin-right: 6px;
+  }
+}
+
+.brand__name {
+  color: var(--color-primary);
+  font-size: var(--text-logo);
+  font-weight: 500;
+}
+
+@media (min-width: 576px) {
+  .brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/***********************/
+/* NAVIGATION */
+/***********************/
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .nav__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.nav__list--link:link, .nav__list--link:visited {
+  color: var(--color-text);
+  font-size: var(--text-link);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__btn {
+  width: 29px;
+  height: 29px;
+  border: none;
+  margin-right: 15px;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.nav__btn--icon {
+  width: 29px;
+  height: 29px;
+}
+
+.nav__btn--icon[name="close"] {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .nav__btn {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9;
+    visibility: hidden;
+  }
+}
+
+.nav-open .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav-open .nav__btn--icon[name="close"] {
+  display: block;
+}
+
+.nav-open .nav__btn--icon[name="menu"] {
+  display: none;
+}
+
+.nav-open .main-nav .nav-list .nav-list__link:link,
+.nav-open .main-nav .nav-list .nav-list__link:visited {
+  color: var(--primary-text-color);
+}
+/*# sourceMappingURL=main.css.map */
