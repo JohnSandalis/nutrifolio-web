@@ -304,6 +304,89 @@ body {
 }
 
 /***********************/
+/* HERO */
+/***********************/
+.hero__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 48px 24px;
+}
+
+.hero__text-box {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero__text-box--title {
+  font-size: var(--title-md);
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.hero__text-box--text {
+  font-size: var(--text-md);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.hero__text-box--btn:link, .hero__text-box--btn:visited {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 6px 24px;
+  text-decoration: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+.hero__text-box--btn:hover, .hero__text-box--btn:active {
+  color: var(--color-primary-dark);
+  background-color: #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+          box-shadow: inset 0px 0px 0px 1.5px var(--color-primary-dark);
+}
+
+.hero__text-box--btn:link, .hero__text-box--btn::visited {
+  font-size: 20px;
+  padding: 8px 28px;
+}
+
+.hero__img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+/***********************/
 /* FOOTER */
 /***********************/
 .footer {

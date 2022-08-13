@@ -166,6 +166,55 @@
 }
 
 /***********************/
+/* HERO */
+/***********************/
+.hero {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 48px 24px;
+  }
+  &__text-box {
+    order: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &--title {
+      font-size: var(--title-md);
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    &--text {
+      font-size: var(--text-md);
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    &--btn {
+      @include btn--green;
+      &:link,
+      &::visited {
+        font-size: 20px;
+        padding: 8px 28px;
+      }
+    }
+  }
+  &__img {
+    order: 1;
+    width: 100%;
+    margin-bottom: 36px;
+  }
+}
+
+/***********************/
 /* FOOTER */
 /***********************/
 .footer {
