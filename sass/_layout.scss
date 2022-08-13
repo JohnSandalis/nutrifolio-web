@@ -64,13 +64,18 @@
           margin-right: 35px;
         }
       }
-      @media (max-width: 575px) {
+
+      @include mobile {
         padding: 15px 20px;
         width: 100%;
 
         &:not(:last-child) {
           margin-right: 0;
           border-bottom: 1px solid #e5e5e5;
+        }
+
+        &:last-child {
+          margin-top: 10px;
         }
       }
 
@@ -82,28 +87,22 @@
     }
 
     &--link {
-      &:link,
-      &:visited {
-        color: var(--color-text);
-        font-size: var(--text-link);
-        font-weight: 500;
-        text-decoration: none;
-      }
+      @include link;
     }
 
     &--btn {
       &[name="login"] {
         @include btn--green;
-        margin-right: 15px;
 
         @include sm {
+          margin: 0 15px 0 0;
           @include btn--white;
         }
       }
 
       &[name="signup"] {
         @include btn--green;
-        @media (max-width: 575px) {
+        @include mobile {
           display: none;
         }
       }
@@ -132,7 +131,7 @@
     }
   }
 
-  @media (max-width: 575px) {
+  @include mobile {
     background-color: rgba(255, 255, 255, 1);
     position: absolute;
     top: 80px;
@@ -163,10 +162,184 @@
         display: none;
       }
     }
+  }
+}
 
-    .main-nav .nav-list .nav-list__link:link,
-    .main-nav .nav-list .nav-list__link:visited {
-      color: var(--primary-text-color);
+/***********************/
+/* FOOTER */
+/***********************/
+.footer {
+  margin-top: auto;
+  background-color: var(--color-background);
+
+  &__container {
+    padding: 68px 0;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      row-gap: 48px;
+      width: 500px;
+      margin: 0 auto;
     }
+
+    @include lg {
+      display: flex;
+      justify-content: space-between;
+      width: 992px;
+      padding: 68px;
+    }
+
+    @include xl {
+      width: 1200px;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 24px;
+
+    @include md {
+      justify-content: flex-start;
+    }
+
+    &--logo {
+      height: 28px;
+      margin-right: 6px;
+    }
+
+    &--name {
+      color: var(--color-primary);
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &__copyright {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--color-text);
+
+    @include md {
+      text-align: start;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @include md {
+    justify-content: flex-start;
+  }
+
+  &__link {
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__logo {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.brand-col,
+.links-col,
+.contact-col {
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.col-heading {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 18px;
+
+  @include md {
+    text-align: start;
+  }
+}
+
+.links-col {
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__link {
+    @include link;
+  }
+}
+
+.contact-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include md {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__link {
+    @include link;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.download-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include md {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .col-heading {
+    margin-bottom: 12px;
+  }
+
+  &__link {
+    &:last-child {
+      margin-top: 12px;
+    }
+  }
+
+  &__logo {
+    height: 40px;
   }
 }
