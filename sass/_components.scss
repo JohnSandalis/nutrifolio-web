@@ -59,3 +59,19 @@
     opacity: 0.65;
   }
 }
+
+.section-title {
+  color: var(--color-primary);
+  font-size: var(--title-section);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.section-subtitle {
+  color: var(--color-text);
+  font-size: var(--title-section-sub);
+  font-weight: 500;
+  text-align: center;
+}

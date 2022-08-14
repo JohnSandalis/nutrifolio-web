@@ -34,6 +34,7 @@ body {
   --title-md: 22px;
   --title-sm: 20px;
   --title-section: 14px;
+  --title-section-sub: 22px;
 
   --text-md: 16px;
   --text-sm: 14px;
@@ -43,6 +44,9 @@ body {
 
   @include lg {
     --title-md: 26px;
+    --title-sm: 22px;
+    --title-section-sub: 24px;
+
     --text-md: 18px;
   }
 
