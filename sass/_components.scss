@@ -51,11 +51,11 @@
     font-weight: 500;
     font-size: var(--text-link);
     color: var(--color-text);
-    transition: color 0.3s;
+    transition: opacity 0.3s;
   }
 
   &:hover,
   &:active {
-    color: var(--color-primary-dark);
+    opacity: 0.65;
   }
 }

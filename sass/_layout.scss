@@ -171,23 +171,52 @@
 .hero {
   &__container {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    margin: 48px 24px;
+    max-width: 490px;
+    margin: 0 auto;
+    padding: 48px 24px;
+
+    @include md {
+      max-width: 1200px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
   }
   &__text-box {
     order: 2;
 
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    text-align: center;
+
+    @include md {
+      order: 1;
+      text-align: left;
+      align-items: flex-start;
+      max-width: 430px;
+      margin-left: 25px;
+    }
+
+    @include lg-xl {
+      max-width: 470px;
+    }
+
+    @include xl {
+      max-width: 540px;
+    }
 
     &--title {
       font-size: var(--title-md);
       font-weight: 600;
       color: var(--color-primary-dark);
       margin-bottom: 18px;
-      text-align: center;
+
+      @include xl {
+        margin-bottom: 24px;
+      }
     }
 
     &--text {
@@ -195,22 +224,38 @@
       font-weight: 500;
       color: var(--color-text);
       margin-bottom: 18px;
-      text-align: center;
+
+      @include xl {
+        margin-bottom: 24px;
+      }
     }
 
     &--btn {
       @include btn--green;
       &:link,
-      &::visited {
+      &:visited {
         font-size: 20px;
         padding: 8px 28px;
+
+        @include lg {
+          font-size: 22px;
+        }
       }
     }
   }
-  &__img {
+  &__img-box {
     order: 1;
-    width: 100%;
+    max-width: 380px;
     margin-bottom: 36px;
+
+    @include md {
+      margin-bottom: 0;
+      order: 2;
+    }
+
+    &--img {
+      width: 100%;
+    }
   }
 }
 
@@ -274,7 +319,7 @@
     color: var(--color-text);
 
     @include md {
-      text-align: start;
+      text-align: left;
     }
   }
 }
@@ -290,8 +335,14 @@
 
   &__link {
     text-decoration: none;
+    transition: opacity 0.3s;
     &:not(:last-child) {
       margin-right: 20px;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.75;
     }
   }
 
@@ -319,7 +370,7 @@
   margin-bottom: 18px;
 
   @include md {
-    text-align: start;
+    text-align: left;
   }
 }
 
@@ -383,8 +434,14 @@
   }
 
   &__link {
+    transition: opacity 0.3s;
     &:last-child {
       margin-top: 12px;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.75;
     }
   }
 
