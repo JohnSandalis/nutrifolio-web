@@ -42,12 +42,14 @@ body {
   --text-placeholder: 18px;
   --text-logo: 22px;
 
+  @include md {
+    --text-md: 18px;
+  }
+
   @include lg {
     --title-md: 26px;
     --title-sm: 22px;
     --title-section-sub: 24px;
-
-    --text-md: 18px;
   }
 
   @include xl {

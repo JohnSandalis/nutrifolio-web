@@ -44,12 +44,17 @@ body {
   --text-logo: 22px;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --text-md: 18px;
+  }
+}
+
 @media (min-width: 992px) {
   :root {
     --title-md: 26px;
     --title-sm: 22px;
     --title-section-sub: 24px;
-    --text-md: 18px;
   }
 }
 
@@ -61,7 +66,7 @@ body {
 }
 
 .section-title {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-size: var(--title-section);
   font-weight: 600;
   text-transform: uppercase;
@@ -706,6 +711,92 @@ body {
 .supported-by__img:nth-child(3) {
   height: auto;
   width: 160px;
+}
+
+/***********************/
+/* BENEFITS */
+/***********************/
+.benefits {
+  margin-top: 24px;
+}
+
+@media (min-width: 864px) {
+  .benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.benefits-section {
+  background-color: var(--color-background);
+  padding: 64px 0;
+}
+
+.benefit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 864px) {
+  .benefit {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.benefit:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 864px) {
+  .benefit:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .benefit:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+.benefit__icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+.benefit__title {
+  color: var(--color-primary-dark);
+  font-size: var(--title-sm);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.benefit__description {
+  font-size: var(--text-md);
+  max-width: 250px;
+}
+
+@media (min-width: 992px) {
+  .benefit__description {
+    max-width: 265px;
+  }
 }
 
 /***********************/
