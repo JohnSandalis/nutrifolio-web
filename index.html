@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="/icons/icon-white.svg" />
+    <link rel="icon" type="image/x-icon" href="/icons/icon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,22 +43,9 @@
       <nav class="nav">
         <ul class="nav__list">
           <li><a class="link nav__list--link" href="index.html">Home</a></li>
-          <li>
-            <a class="link nav__list--link" href="about.html">About us</a>
-          </li>
-          <li name="signup--link">
-            <a class="link nav__list--link" href="signup.html"
-              >Create Account</a
-            >
-          </li>
-          <li>
-            <a class="link nav__list--btn" name="login" href="login.html"
-              >Log in</a
-            >
-            <a class="link nav__list--btn" name="signup" href="signup.html"
-              >Sign up</a
-            >
-          </li>
+          <li><a class="link nav__list--link" href="#hiw">How it works</a></li>
+          <li><a class="link nav__list--link" href="#benefits">Benefits</a></li>
+          <li><a class="link nav__list--link" href="#faq">FAQ</a></li>
         </ul>
       </nav>
     </header>
@@ -75,7 +62,12 @@
               there is rarely any available nutritional information on meals.
               With your help we can change this
             </p>
-            <a href="#" class="hero__text-box--btn">Become a partner</a>
+            <a
+              target="_blank"
+              href="https://calendly.com/giannis-sandalis/30min"
+              class="hero__text-box--btn"
+              >Schedule a call</a
+            >
           </div>
           <div class="hero__img-box">
             <img
@@ -87,7 +79,7 @@
         </div>
       </section>
 
-      <section class="how-it-works-section">
+      <section class="how-it-works-section" id="hiw">
         <h2 class="section-title">How it works</h2>
         <h3 class="section-subtitle">Do you own a food store?</h3>
         <div class="hiw">
@@ -164,6 +156,7 @@
                   src="images/logo-acein.png"
                   alt="Athens Center of Innovation and Entrepreneurship logo"
                   class="supported-by__img"
+                  name="acein"
                 />
               </a>
               <a
@@ -175,19 +168,21 @@
                   src="images/logo-sff.png"
                   alt="Start For Future logo"
                   class="supported-by__img"
+                  name="sff"
                 />
               </a>
             </div>
             <div class="supported-by__wrapper">
               <a
                 target="_blank"
-                href="https://eit.europa.eu/"
+                href="https://www.brightredtriangle.co.uk/"
                 class="supported-by__link"
               >
                 <img
-                  src="images/logo-eit.png"
-                  alt="European Institute of Innovation and Technology logo"
+                  src="images/enu-logo.jpg"
+                  alt="Edinburgh Napier University logo "
                   class="supported-by__img"
+                  name="enu"
                 />
               </a>
             </div>
@@ -195,7 +190,7 @@
         </div>
       </section>
 
-      <section class="benefits-section">
+      <section class="benefits-section" id="benefits">
         <h2 class="section-title">Benefits</h2>
         <h3 class="section-subtitle">What's in it for you?</h3>
         <div class="benefits">
@@ -230,7 +225,7 @@
         </div>
       </section>
 
-      <section class="faq-section">
+      <section class="faq-section" id="faq">
         <h2 class="section-title">Frequently asked questions</h2>
 
         <div class="faq">
@@ -306,7 +301,11 @@
             <a target="_blank" href="#" class="social__link">
               <img src="icons/logo-facebook.svg" class="social__logo" />
             </a>
-            <a target="_blank" href="#" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/nutrifolio"
+              class="social__link"
+            >
               <img src="icons/logo-instagram.svg" class="social__logo"
             /></a>
             <a target="_blank" href="#" class="social__link">
@@ -322,44 +321,30 @@
           <h4 class="col-heading">Links</h4>
           <ul class="links-col__list">
             <li>
-              <a href="#" class="links-col__link">How it works</a>
+              <a href="index.html" class="links-col__link">Home</a>
             </li>
             <li>
-              <a href="#" class="links-col__link">Benefits</a>
+              <a href="#hiw" class="links-col__link">How it works</a>
             </li>
             <li>
-              <a href="#" class="links-col__link">Log in</a>
+              <a href="#benefits" class="links-col__link">Benefits</a>
             </li>
             <li>
-              <a href="#" class="links-col__link">Create Account</a>
-            </li>
-            <li>
-              <a href="#" class="links-col__link">Terms and Conditions</a>
+              <a href="#faq" class="links-col__link">FAQ</a>
             </li>
           </ul>
         </div>
         <div class="contact-col">
           <h4 class="col-heading">Contact us</h4>
-          <a href="#" class="contact-col__link">Become a partner</a>
-          <a href="#" class="contact-col__link">(+30) 216-200-0000</a>
-          <a href="#" class="contact-col__link">info@nutrifolio.eu</a>
-        </div>
-        <div class="download-col">
-          <h4 class="col-heading">Download our app</h4>
-          <a href="#" class="download-col__link">
-            <img
-              src="icons/app-store.svg"
-              alt="Apple store download logo"
-              class="download-col__logo"
-            />
-          </a>
-          <a href="#" class="download-col__link">
-            <img
-              src="icons/google-play.svg"
-              alt="Google play download logo"
-              class="download-col__logo"
-            />
-          </a>
+          <a
+            target="_blank"
+            href="https://calendly.com/giannis-sandalis/30min"
+            class="contact-col__link"
+            >Schedule a call</a
+          >
+          <a href="mailto:nutrifolio.app@gmail.com" class="contact-col__link"
+            >nutrifolio.app@gmail.com</a
+          >
         </div>
       </div>
     </footer>

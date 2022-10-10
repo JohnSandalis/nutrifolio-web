@@ -73,38 +73,16 @@
           margin-right: 0;
           border-bottom: 1px solid #e5e5e5;
         }
-
-        &:last-child {
-          margin-top: 10px;
-        }
-      }
-
-      &[name="signup--link"] {
-        @include sm {
-          display: none;
-        }
       }
     }
 
     &--link {
       @include link;
-    }
 
-    &--btn {
-      &[name="login"] {
-        @include btn--green;
-
-        @include sm {
-          margin: 0 15px 0 0;
-          @include btn--white;
-        }
-      }
-
-      &[name="signup"] {
-        @include btn--green;
-        @include mobile {
-          display: none;
-        }
+      &:hover,
+      &:active {
+        opacity: 1;
+        color: var(--color-primary-dark);
       }
     }
   }
@@ -143,6 +121,7 @@
     pointer-events: none;
     z-index: 9;
     visibility: hidden;
+    transition: all 0.3s;
   }
 
   &-open {
@@ -374,39 +353,37 @@
     align-items: center;
     justify-content: center;
 
-    &:nth-child(1) {
-      img {
-        &:nth-child(1) {
-          height: auto;
-          width: 140px;
-          margin-right: 12px;
+    img {
+      &[name="acein"] {
+        height: auto;
+        width: 140px;
+        margin-right: 12px;
 
-          @include xl {
-            width: 170px;
-          }
-        }
-
-        &:nth-child(2) {
-          height: 43px;
-          width: auto;
-
-          @include md {
-            margin-right: 12px;
-          }
-
-          @include xl {
-            height: 50px;
-          }
+        @include xl {
+          width: 180px;
         }
       }
-    }
-    &:nth-child(2) {
-      img {
+
+      &[name="sff"] {
+        height: 43px;
+        width: auto;
+
+        @include md {
+          margin-right: 12px;
+        }
+
+        @include xl {
+          height: 50px;
+        }
+      }
+
+      &[name="enu"] {
         height: 43px;
         width: auto;
 
         @include xl {
-          height: 50px;
+          height: 55px;
+          margin-top: -8px;
         }
       }
     }
@@ -579,17 +556,9 @@
   &__container {
     padding: 68px 0;
 
-    @include md {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      row-gap: 48px;
-      width: 500px;
-      margin: 0 auto;
-    }
-
     @include lg {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       width: 992px;
       padding: 68px;
     }
@@ -606,7 +575,7 @@
     text-decoration: none;
     margin-bottom: 24px;
 
-    @include md {
+    @include lg {
       justify-content: flex-start;
     }
 
@@ -628,7 +597,7 @@
     text-align: center;
     color: var(--color-text);
 
-    @include md {
+    @include lg {
       text-align: left;
     }
   }
@@ -639,7 +608,7 @@
   justify-content: center;
   margin-bottom: 24px;
 
-  @include md {
+  @include lg {
     justify-content: flex-start;
   }
 
@@ -665,7 +634,7 @@
 .brand-col,
 .links-col,
 .contact-col {
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     &:not(:last-child) {
       margin-bottom: 48px;
     }
@@ -679,7 +648,7 @@
   color: var(--color-primary-dark);
   margin-bottom: 18px;
 
-  @include md {
+  @include lg {
     text-align: left;
   }
 }
@@ -692,7 +661,7 @@
     justify-content: center;
     flex-direction: column;
 
-    @include md {
+    @include lg {
       align-items: flex-start;
       justify-content: flex-start;
     }
@@ -715,7 +684,7 @@
   justify-content: center;
   flex-direction: column;
 
-  @include md {
+  @include lg {
     align-items: flex-start;
     justify-content: flex-start;
   }
@@ -734,7 +703,7 @@
   justify-content: center;
   flex-direction: column;
 
-  @include md {
+  @include lg {
     align-items: flex-start;
     justify-content: flex-start;
   }
