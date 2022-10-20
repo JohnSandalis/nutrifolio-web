@@ -3,21 +3,45 @@
 /***********************/
 
 .header {
-  display: flex;
-  align-items: center;
+  z-index: 999;
 
-  height: 80px;
-  padding: 0 20px;
-  background-color: var(--color-background);
+  &.sticky {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 10px 40px 12px rgba($color: #000000, $alpha: 0.12);
+    z-index: 999;
 
-  @include sm {
-    justify-content: space-between;
+    ~ main .hero-section {
+      margin-top: 80px;
+    }
+
+    .nav {
+      height: 60px;
+
+      @include mobile {
+        &__list {
+          height: calc(100vh - 60px);
+          top: 60px;
+        }
+      }
+    }
+
+    .brand {
+      &__logo {
+        @include sm {
+          height: 24px;
+        }
+      }
+
+      &__name {
+        font-size: 20px;
+      }
+    }
   }
 }
 
 .brand {
   text-decoration: none;
-  z-index: 99;
 
   &__logo {
     display: none;
@@ -45,6 +69,16 @@
 /* NAVIGATION */
 /***********************/
 .nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: var(--color-background);
+
+  @include sm {
+    justify-content: space-between;
+  }
+
   &__list {
     display: flex;
     align-items: flex-start;
@@ -54,6 +88,20 @@
     @include sm {
       align-items: center;
       flex-direction: row;
+    }
+
+    @include mobile {
+      background-color: #fff;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 55vw;
+      height: calc(100vh - 80px);
+      transform: translateX(-100vw);
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transition: all 0.3s;
     }
 
     li {
@@ -109,23 +157,8 @@
     }
   }
 
-  @include mobile {
-    background-color: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 55vw;
-    height: calc(100vh - 80px);
-    transform: translateX(-100vw);
-    opacity: 0;
-    pointer-events: none;
-    z-index: 9;
-    visibility: hidden;
-    transition: all 0.3s;
-  }
-
   &-open {
-    .nav {
+    .nav__list {
       opacity: 1;
       pointer-events: auto;
       visibility: visible;
@@ -242,6 +275,7 @@
 /* HOW IT WORKS */
 /***********************/
 .how-it-works-section {
+  scroll-margin-top: 60px;
   background-color: var(--color-background);
   padding: 64px 20px;
 }
@@ -430,6 +464,7 @@
   }
 
   &-section {
+    scroll-margin-top: 60px;
     background-color: var(--color-background);
     padding: 64px 0;
   }
@@ -502,6 +537,7 @@
   }
 
   &-section {
+    scroll-margin-top: 124px;
     margin: 64px 0;
 
     .section-title {
@@ -525,7 +561,7 @@
 
     color: var(--color-primary-dark);
     font-size: var(--title-sm);
-    font-weight: 600;
+    font-weight: 500;
 
     &:hover {
       cursor: pointer;
@@ -644,7 +680,7 @@
 .col-heading {
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-primary-dark);
   margin-bottom: 18px;
 
