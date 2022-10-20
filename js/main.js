@@ -51,7 +51,9 @@ const observeNav = function () {
 };
 
 // Smooth link scrolling
-const linksList = document.querySelectorAll(".nav__list--link");
+const navLinks = document.querySelectorAll(".nav__list--link");
+const footerLinks = document.querySelectorAll(".links-col__link");
+const linksList = [...navLinks, ...footerLinks];
 const sectionsList = document.querySelectorAll("section");
 
 const smoothScrolling = function () {
