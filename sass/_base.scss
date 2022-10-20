@@ -30,6 +30,7 @@ body {
 
   --color-background: #faf9f6;
 
+  --title-lg: 22px;
   --title-md: 22px;
   --title-sm: 20px;
   --title-section: 14px;
@@ -41,17 +42,23 @@ body {
   --text-placeholder: 18px;
   --text-logo: 22px;
 
+  @include xs {
+    --title-lg: 26px;
+  }
+
   @include md {
     --text-md: 18px;
   }
 
   @include lg {
+    --title-lg: 32px;
     --title-md: 26px;
     --title-sm: 22px;
     --title-section-sub: 24px;
   }
 
   @include xl {
+    --title-lg: 36px;
     --title-md: 32px;
     --text-md: 20px;
   }

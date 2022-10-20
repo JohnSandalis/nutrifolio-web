@@ -23,6 +23,7 @@ body {
   --color-primary-dark: #529a2f;
   --color-primary-light: #7cbc5d;
   --color-background: #faf9f6;
+  --title-lg: 22px;
   --title-md: 22px;
   --title-sm: 20px;
   --title-section: 14px;
@@ -32,16 +33,21 @@ body {
   --text-link: 16px;
   --text-placeholder: 18px;
   --text-logo: 22px; }
+  @media (min-width: 480px) {
+    :root {
+      --title-lg: 26px; } }
   @media (min-width: 768px) {
     :root {
       --text-md: 18px; } }
   @media (min-width: 992px) {
     :root {
+      --title-lg: 32px;
       --title-md: 26px;
       --title-sm: 22px;
       --title-section-sub: 24px; } }
   @media (min-width: 1200px) {
     :root {
+      --title-lg: 36px;
       --title-md: 32px;
       --text-md: 20px; } }
 
@@ -271,13 +277,13 @@ body {
       margin-left: 25px; } }
   @media (min-width: 992px) and (max-width: 1200px) {
     .hero__text-box {
-      max-width: 470px; } }
+      max-width: 500px; } }
   @media (min-width: 1200px) {
     .hero__text-box {
-      max-width: 540px; } }
+      max-width: 600px; } }
   .hero__text-box--title {
-    font-size: var(--title-md);
-    font-weight: 600;
+    font-size: var(--title-lg);
+    font-weight: 500;
     color: var(--color-primary-dark);
     margin-bottom: 18px; }
     @media (min-width: 1200px) {
@@ -285,7 +291,7 @@ body {
         margin-bottom: 24px; } }
   .hero__text-box--text {
     font-size: var(--text-md);
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-text);
     margin-bottom: 18px; }
     @media (min-width: 1200px) {
@@ -453,7 +459,7 @@ body {
 /***********************/
 .benefits {
   margin-top: 24px; }
-  @media (min-width: 864px) {
+  @media (min-width: 902px) {
     .benefits {
       display: flex;
       justify-content: center; } }
@@ -467,13 +473,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center; }
-  @media (min-width: 864px) {
+  @media (min-width: 902px) {
     .benefit {
       align-items: flex-start;
       text-align: left; } }
   .benefit:not(:last-child) {
     margin-bottom: 32px; }
-    @media (min-width: 864px) {
+    @media (min-width: 902px) {
       .benefit:not(:last-child) {
         margin-right: 20px; } }
     @media (min-width: 992px) {
@@ -488,12 +494,21 @@ body {
     font-size: var(--title-sm);
     font-weight: 500;
     margin-bottom: 8px; }
+    @media (min-width: 902px) {
+      .benefit__title {
+        font-size: 20px; } }
   .benefit__description {
     font-size: var(--text-md);
-    max-width: 250px; }
-    @media (min-width: 992px) {
+    max-width: 290px; }
+    @media (min-width: 576px) {
       .benefit__description {
-        max-width: 265px; } }
+        max-width: 350px; } }
+    @media (min-width: 768px) {
+      .benefit__description {
+        max-width: 270px; } }
+    @media (min-width: 1200px) {
+      .benefit__description {
+        max-width: 320px; } }
 
 /***********************/
 /* FAQ */

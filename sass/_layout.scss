@@ -213,16 +213,16 @@
     }
 
     @include lg-xl {
-      max-width: 470px;
+      max-width: 500px;
     }
 
     @include xl {
-      max-width: 540px;
+      max-width: 600px;
     }
 
     &--title {
-      font-size: var(--title-md);
-      font-weight: 600;
+      font-size: var(--title-lg);
+      font-weight: 500;
       color: var(--color-primary-dark);
       margin-bottom: 18px;
 
@@ -233,7 +233,7 @@
 
     &--text {
       font-size: var(--text-md);
-      font-weight: 500;
+      font-weight: 400;
       color: var(--color-text);
       margin-bottom: 18px;
 
@@ -458,7 +458,7 @@
 .benefits {
   margin-top: 24px;
 
-  @media (min-width: 864px) {
+  @media (min-width: 902px) {
     display: flex;
     justify-content: center;
   }
@@ -476,7 +476,7 @@
   align-items: center;
   text-align: center;
 
-  @media (min-width: 864px) {
+  @media (min-width: 902px) {
     align-items: flex-start;
     text-align: left;
   }
@@ -484,7 +484,7 @@
   &:not(:last-child) {
     margin-bottom: 32px;
 
-    @media (min-width: 864px) {
+    @media (min-width: 902px) {
       margin-right: 20px;
     }
 
@@ -504,14 +504,26 @@
     font-size: var(--title-sm);
     font-weight: 500;
     margin-bottom: 8px;
+
+    @media (min-width: 902px) {
+      font-size: 20px;
+    }
   }
 
   &__description {
     font-size: var(--text-md);
-    max-width: 250px;
+    max-width: 290px;
 
-    @include lg {
-      max-width: 265px;
+    @include sm {
+      max-width: 350px;
+    }
+
+    @include md {
+      max-width: 270px;
+    }
+
+    @include xl {
+      max-width: 320px;
     }
   }
 }
