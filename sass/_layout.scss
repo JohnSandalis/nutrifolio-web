@@ -54,7 +54,7 @@
   }
 
   &__name {
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     font-size: var(--text-logo);
     font-weight: 500;
   }
@@ -350,7 +350,7 @@
     }
 
     &--title {
-      color: var(--color-primary);
+      color: var(--color-primary-dark);
       font-size: var(--title-sm);
       font-weight: 500;
       margin-bottom: 12px;
@@ -633,7 +633,7 @@
     }
 
     &--name {
-      color: var(--color-primary);
+      color: var(--color-primary-dark);
       font-size: 20px;
       font-weight: 500;
     }

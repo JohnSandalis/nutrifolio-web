@@ -155,7 +155,7 @@ body {
         height: 28px;
         margin-right: 6px; } }
   .brand__name {
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     font-size: var(--text-logo);
     font-weight: 500; }
   @media (min-width: 576px) {
@@ -386,7 +386,7 @@ body {
       .hiw__text-box {
         width: 400px; } }
     .hiw__text-box--title {
-      color: var(--color-primary);
+      color: var(--color-primary-dark);
       font-size: var(--title-sm);
       font-weight: 500;
       margin-bottom: 12px; }
@@ -583,7 +583,7 @@ body {
       height: 28px;
       margin-right: 6px; }
     .footer__brand--name {
-      color: var(--color-primary);
+      color: var(--color-primary-dark);
       font-size: 20px;
       font-weight: 500; }
   .footer__copyright {
