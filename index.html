@@ -10,7 +10,7 @@
       content="Find meals from nearby stores that match your dietary needs. Nutrifolio collects nutritional information on store products and helps you stick to your diet even when you are outside"
     />
 
-    <link rel="icon" type="image/x-icon" href="/icons/icon.svg" />
+    <link rel="icon" type="image/x-icon" href="/img/icon.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,21 +29,15 @@
     <header class="header">
       <nav class="nav">
         <button class="nav__btn">
-          <img
-            class="nav__btn--icon"
-            src="icons/menu.svg"
-            alt="menu icon"
-            name="menu"
-          />
-          <img
-            class="nav__btn--icon"
-            src="icons/close.svg"
-            alt="close menu icon"
-            name="close"
-          />
+          <svg class="nav__btn--icon" name="menu">
+            <use xlink:href="img/sprite.svg#icon-menu"></use>
+          </svg>
+          <svg class="nav__btn--icon" name="close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
         </button>
         <a href="index.html" class="brand">
-          <img src="icons/icon.svg" class="brand__logo" alt="Nutrifolio logo" />
+          <img src="img/icon.svg" class="brand__logo" alt="Nutrifolio logo" />
           <p class="brand__name">Nutrifolio</p>
         </a>
 
@@ -91,7 +85,7 @@
           </div>
           <div class="hero__img-box">
             <img
-              src="images/app.jpg"
+              src="img/app.jpg"
               alt="Nutrifolio mobile application image"
               class="hero__img-box--img"
             />
@@ -106,7 +100,7 @@
           <div class="hiw__step">
             <div class="hiw__img-box">
               <img
-                src="images/create-account.jpg"
+                src="img/create-account.jpg"
                 alt="Image of sign up page"
                 class="hiw__img-box--img"
               />
@@ -124,7 +118,7 @@
           <div class="hiw__step">
             <div class="hiw__img-box">
               <img
-                src="images/products.jpg"
+                src="img/products.jpg"
                 alt="Image of products page"
                 class="hiw__img-box--img"
               />
@@ -135,15 +129,14 @@
                 Upload your meals, along with their nutritional information, to
                 our platform. If you haven’t already calculated the nutritional
                 values, you can either do so on your own with our facilitating
-                tool or let our nutritional analysis partner undertake the whole
-                process.
+                tool or let us undertake the whole process.
               </div>
             </div>
           </div>
           <div class="hiw__step">
             <div class="hiw__img-box">
               <img
-                src="images/stats.jpg"
+                src="img/stats.jpg"
                 alt="Image of dashboard"
                 class="hiw__img-box--img"
               />
@@ -172,7 +165,7 @@
                 class="supported-by__link"
               >
                 <img
-                  src="images/logo-acein.png"
+                  src="img/logo-acein.png"
                   alt="Athens Center of Innovation and Entrepreneurship logo"
                   class="supported-by__img"
                   name="acein"
@@ -184,7 +177,7 @@
                 class="supported-by__link"
               >
                 <img
-                  src="images/logo-sff.png"
+                  src="img/logo-sff.png"
                   alt="Start For Future logo"
                   class="supported-by__img"
                   name="sff"
@@ -198,7 +191,7 @@
                 class="supported-by__link"
               >
                 <img
-                  src="images/enu-logo.jpg"
+                  src="img/enu-logo.jpg"
                   alt="Edinburgh Napier University logo "
                   class="supported-by__img"
                   name="enu"
@@ -214,7 +207,9 @@
         <h3 class="section-subtitle">What's in it for you?</h3>
         <div class="benefits">
           <div class="benefit">
-            <img src="icons/users.svg" alt="Heart icon" class="benefit__icon" />
+            <svg class="benefit__icon">
+              <use xlink:href="img/sprite.svg#icon-users"></use>
+            </svg>
             <h4 class="benefit__title">Gain more customers</h4>
             <p class="benefit__description">
               Do you produce snacks or meals that could match specific diets?
@@ -222,11 +217,9 @@
             </p>
           </div>
           <div class="benefit">
-            <img
-              src="icons/megaphone.svg"
-              alt="Heart icon"
-              class="benefit__icon"
-            />
+            <svg class="benefit__icon">
+              <use xlink:href="img/sprite.svg#icon-announce"></use>
+            </svg>
             <h4 class="benefit__title">Promote transparency</h4>
             <p class="benefit__description">
               Publish the nutritional information of your products. Nowadays,
@@ -235,7 +228,9 @@
             </p>
           </div>
           <div class="benefit">
-            <img src="icons/heart.svg" alt="Heart icon" class="benefit__icon" />
+            <svg class="benefit__icon">
+              <use xlink:href="img/sprite.svg#icon-happy"></use>
+            </svg>
             <h4 class="benefit__title">Increase Customer satisfaction</h4>
             <p class="benefit__description">
               Everyone who finds a meal from your store, thanks to the
@@ -259,8 +254,12 @@
               aria-controls="faq1_desc"
             >
               How much does my store have to pay?
-              <img src="icons/add-circle.svg" alt="" />
-              <img src="icons/remove-circle.svg" alt="" />
+              <svg class="faq__question--icon">
+                <use xlink:href="img/sprite.svg#icon-add"></use>
+              </svg>
+              <svg class="faq__question--icon">
+                <use xlink:href="img/sprite.svg#icon-remove"></use>
+              </svg>
             </button>
             <p id="faq1_desc" class="faq__answer">
               There is no entry fee!<br /><br />
@@ -268,7 +267,7 @@
               product of yours is clicked. The payment is proportional to the
               amount of users and traffic you get. <br /><br />
               The only extra fee is the nutritional analysis of your products,
-              only if you want us to undertake the whole procedure.
+              only when you choose us for undertaking the whole proccess.
             </p>
           </div>
           <div class="faq__wrapper">
@@ -279,8 +278,12 @@
               aria-controls="faq2_desc"
             >
               What does my store gain?
-              <img src="icons/add-circle.svg" alt="" />
-              <img src="icons/remove-circle.svg" alt="" />
+              <svg class="faq__question--icon">
+                <use xlink:href="img/sprite.svg#icon-add"></use>
+              </svg>
+              <svg class="faq__question--icon">
+                <use xlink:href="img/sprite.svg#icon-remove"></use>
+              </svg>
             </button>
             <p id="faq2_desc" class="faq__answer">
               The immediate benefits of joining Nutrifolio are gaining more
@@ -301,7 +304,7 @@
         <div class="brand-col">
           <a href="index.html" class="footer__brand">
             <img
-              src="icons/icon.svg"
+              src="img/icon.svg"
               class="footer__brand--logo"
               alt="Nutrifolio logo"
             />
@@ -314,11 +317,9 @@
               class="social__link"
               aria-label="Facebook"
             >
-              <img
-                src="icons/logo-facebook.svg"
-                class="social__logo"
-                alt="Facebook logo"
-              />
+              <svg class="social__logo">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
             </a>
             <a
               target="_blank"
@@ -326,22 +327,18 @@
               class="social__link"
               aria-label="Instagram"
             >
-              <img
-                src="icons/logo-instagram.svg"
-                class="social__logo"
-                alt="Instagram logo"
-            /></a>
+              <svg class="social__logo">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use></svg
+            ></a>
             <a
               target="_blank"
               href="https://www.linkedin.com/company/nutrifolio/"
               class="social__link"
               aria-label="LinkedIn"
             >
-              <img
-                src="icons/logo-linkedin.svg"
-                class="social__logo"
-                alt="LinkedIn logo"
-            /></a>
+              <svg class="social__logo">
+                <use xlink:href="img/sprite.svg#icon-linkedin"></use></svg
+            ></a>
           </div>
           <p class="footer__copyright">
             Copyright © 2022 by <br />
