@@ -532,7 +532,6 @@
 /* FAQ */
 /***********************/
 .faq {
-  padding: 0 12px;
   margin: 0 auto;
   max-width: 520px;
 
@@ -551,46 +550,45 @@
   &-section {
     scroll-margin-top: 124px;
     margin: 64px 0;
+    padding: 0 12px;
 
-    .section-title {
+    .section-subtitle {
       margin-bottom: 36px;
     }
   }
 
   &__wrapper {
     &:not(:last-child) {
-      margin-bottom: 36px;
+      border-bottom: 1px solid #ced4da;
     }
   }
 
   &__question {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     border: none;
     background-color: #fff;
-
-    height: 24px;
-    margin-bottom: 5px;
-
-    color: var(--color-primary-dark);
-    font-size: var(--title-sm);
+    width: 100%;
+    padding: 24px 8px;
+    color: var(--color-primary);
+    font-size: 18px;
     font-weight: 500;
+    text-align: left;
+
+    @include xs {
+      font-size: var(--title-sm);
+    }
 
     &:hover {
       cursor: pointer;
-    }
-
-    img {
-      margin-right: 8px;
-
-      @include md {
-        margin-right: 12px;
-      }
     }
   }
 
   &__answer {
     font-size: var(--text-md);
-    margin-left: 24px;
+    line-height: 1.4;
+    padding: 0 8px 24px 16px;
   }
 }
 

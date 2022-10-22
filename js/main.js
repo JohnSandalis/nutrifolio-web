@@ -99,14 +99,16 @@ class DisclosureButton {
   showContent() {
     if (this.controlledNode) {
       this.controlledNode.style.display = "block";
-      this.buttonNode.children[0].src = "icons/remove-circle.svg";
+      this.buttonNode.children[0].style.display = "none";
+      this.buttonNode.children[1].style.display = "block";
     }
   }
 
   hideContent() {
     if (this.controlledNode) {
       this.controlledNode.style.display = "none";
-      this.buttonNode.children[0].src = "icons/add-circle.svg";
+      this.buttonNode.children[0].style.display = "block";
+      this.buttonNode.children[1].style.display = "none";
     }
   }
 
