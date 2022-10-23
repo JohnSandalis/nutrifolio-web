@@ -144,7 +144,7 @@ const animations = function () {
   const hiwStepEls = document.querySelectorAll(".hiw__step");
   const supporterEls = document.querySelectorAll(".supported-by__link");
   const benefitEls = document.querySelectorAll(".benefit");
-  const faqEls = document.querySelectorAll(".faq__wrapper");
+  const faqEl = document.getElementsByClassName("faq");
 
   ScrollReveal({ distance: "60px", duration: 1000, delay: 200 });
 
@@ -193,13 +193,14 @@ const animations = function () {
       origin: "bottom",
     });
   });
-  faqEls.forEach((faq) => {
-    ScrollReveal().reveal(faq, {
-      delay: 300,
-      origin: "bottom",
-    });
+  ScrollReveal().reveal(faqEl, {
+    delay: 500,
+    origin: "bottom",
   });
 };
+
+// Preloader
+const preloader = document.querySelector(".loader");
 
 window.addEventListener(
   "load",
@@ -221,6 +222,11 @@ window.addEventListener(
 
     // Animations
     animations();
+
+    // Remove preloader
+    setTimeout(function () {
+      preloader.style.display = "none";
+    }, 100);
   },
   false
 );

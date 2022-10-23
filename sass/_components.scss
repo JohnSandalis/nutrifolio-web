@@ -91,6 +91,48 @@
   transition: all 0.5s;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-background);
+  z-index: 99999;
+  content: "";
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.75;
+  animation: bounce 1.8s infinite ease-in-out;
+  content: "";
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.loader:after {
+  animation-delay: -1s;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
