@@ -150,3 +150,129 @@
     opacity: 1;
   }
 }
+
+.RevealInTop {
+  -webkit-animation: RevealInTop 0.5s ease-in-out;
+  -moz-animation: RevealInTop 0.5s ease-in-out;
+  -o-animation: RevealInTop 0.5s ease-in-out;
+  animation: RevealInTop 0.5s ease-in-out;
+}
+
+@-webkit-keyframes RevealInTop {
+  0% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+}
+
+@-moz-keyframes RevealInTop {
+  0% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+}
+
+@-o-keyframes RevealInTop {
+  0% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+}
+
+@keyframes RevealInTop {
+  0% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+}
+
+.HideAwayTop {
+  -webkit-animation: HideAwayTop 0.5s ease-in-out;
+  -moz-animation: HideAwayTop 0.5s ease-in-out;
+  -o-animation: HideAwayTop 0.5s ease-in-out;
+  animation: HideAwayTop 0.5s ease-in-out;
+}
+
+@-webkit-keyframes HideAwayTop {
+  0% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+
+  100% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+@-moz-keyframes HideAwayTop {
+  0% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+
+  100% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+@-o-keyframes HideAwayTop {
+  0% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+
+  100% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes HideAwayTop {
+  0% {
+    padding: 0 8px 24px 16px;
+    height: 100%;
+    max-height: 2000px;
+  }
+
+  100% {
+    padding: 0 8px 0 16px;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
