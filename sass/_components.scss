@@ -152,10 +152,10 @@
 }
 
 .RevealInTop {
-  -webkit-animation: RevealInTop 0.5s ease-in-out;
-  -moz-animation: RevealInTop 0.5s ease-in-out;
-  -o-animation: RevealInTop 0.5s ease-in-out;
-  animation: RevealInTop 0.5s ease-in-out;
+  -webkit-animation: RevealInTop 0.5s both;
+  -moz-animation: RevealInTop 0.5s both;
+  -o-animation: RevealInTop 0.5s both;
+  animation: RevealInTop 0.5s both;
 }
 
 @-webkit-keyframes RevealInTop {
@@ -168,7 +168,7 @@
   100% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 }
 
@@ -182,7 +182,7 @@
   100% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 }
 
@@ -196,7 +196,7 @@
   100% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 }
 
@@ -210,22 +210,22 @@
   100% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 }
 
 .HideAwayTop {
-  -webkit-animation: HideAwayTop 0.5s ease-in-out;
-  -moz-animation: HideAwayTop 0.5s ease-in-out;
-  -o-animation: HideAwayTop 0.5s ease-in-out;
-  animation: HideAwayTop 0.5s ease-in-out;
+  -webkit-animation: HideAwayTop 0.5s both;
+  -moz-animation: HideAwayTop 0.5s both;
+  -o-animation: HideAwayTop 0.5s both;
+  animation: HideAwayTop 0.5s both;
 }
 
 @-webkit-keyframes HideAwayTop {
   0% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 
   100% {
@@ -239,7 +239,7 @@
   0% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 
   100% {
@@ -253,7 +253,7 @@
   0% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 
   100% {
@@ -267,7 +267,7 @@
   0% {
     padding: 0 8px 24px 16px;
     height: 100%;
-    max-height: 2000px;
+    max-height: 340px;
   }
 
   100% {

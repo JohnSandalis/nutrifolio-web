@@ -156,15 +156,19 @@ const animations = function () {
     distance: "120px",
     origin: "right",
   });
+  let titlesCount = 0;
   sectionTitleEls.forEach((sectionTitle) => {
+    titlesCount++;
     ScrollReveal().reveal(sectionTitle, {
-      delay: 100,
+      delay: 100 * titlesCount,
       origin: "bottom",
     });
   });
+  let subtitlesCount = 0;
   sectionSubtitleEls.forEach((sectionSubtitle) => {
+    subtitlesCount++;
     ScrollReveal().reveal(sectionSubtitle, {
-      delay: 100,
+      delay: 100 * subtitlesCount,
       origin: "bottom",
     });
   });
@@ -189,11 +193,9 @@ const animations = function () {
       origin: "bottom",
     });
   });
-  let faqCount = 0;
   faqEls.forEach((faq) => {
-    faqCount++;
     ScrollReveal().reveal(faq, {
-      delay: faqCount * 50 + 200,
+      delay: 300,
       origin: "bottom",
     });
   });
