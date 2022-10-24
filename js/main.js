@@ -149,11 +149,10 @@ const animations = function () {
     document.documentElement.clientWidth || 0,
     window.innerWidth || 0
   );
-  let benefitDelay = [200, 300];
-  vw < 902 ? (benefitDelay = [0, 500]) : "";
-  console.log(benefitDelay[0], benefitDelay[1]);
+  let benefitDelay = [60, 300];
+  vw < 902 ? (benefitDelay = [0, 360]) : "";
 
-  ScrollReveal({ distance: "60px", duration: 1000, delay: 200 });
+  ScrollReveal({ distance: "60px", duration: 1000, delay: 240, cleanup: true });
 
   ScrollReveal().reveal(heroContainerEl.children[0], {
     distance: "120px",
@@ -167,7 +166,7 @@ const animations = function () {
   sectionTitleEls.forEach((sectionTitle) => {
     titlesCount++;
     ScrollReveal().reveal(sectionTitle, {
-      delay: 100 * titlesCount,
+      delay: 90 * titlesCount,
       origin: "bottom",
     });
   });
@@ -175,7 +174,7 @@ const animations = function () {
   sectionSubtitleEls.forEach((sectionSubtitle) => {
     subtitlesCount++;
     ScrollReveal().reveal(sectionSubtitle, {
-      delay: 100 * subtitlesCount,
+      delay: 120 * subtitlesCount,
       origin: "bottom",
     });
   });
@@ -188,7 +187,7 @@ const animations = function () {
   supporterEls.forEach((supporter) => {
     supportersCount++;
     ScrollReveal().reveal(supporter, {
-      delay: supportersCount * 200 + 200,
+      delay: supportersCount * 180 + 240,
       distance: 0,
     });
   });
@@ -201,7 +200,7 @@ const animations = function () {
     });
   });
   ScrollReveal().reveal(faqEl, {
-    delay: 500,
+    delay: 420,
     origin: "bottom",
   });
 };
