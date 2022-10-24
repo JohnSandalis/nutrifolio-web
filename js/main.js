@@ -145,6 +145,13 @@ const animations = function () {
   const supporterEls = document.querySelectorAll(".supported-by__link");
   const benefitEls = document.querySelectorAll(".benefit");
   const faqEl = document.getElementsByClassName("faq");
+  const vw = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  let benefitDelay = [200, 300];
+  vw < 902 ? (benefitDelay = [0, 500]) : "";
+  console.log(benefitDelay[0], benefitDelay[1]);
 
   ScrollReveal({ distance: "60px", duration: 1000, delay: 200 });
 
@@ -189,7 +196,7 @@ const animations = function () {
   benefitEls.forEach((benefit) => {
     benefitsCount++;
     ScrollReveal().reveal(benefit, {
-      delay: benefitsCount * 200 + 300,
+      delay: benefitsCount * benefitDelay[0] + benefitDelay[1],
       origin: "bottom",
     });
   });
