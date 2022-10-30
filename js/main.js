@@ -98,7 +98,8 @@ class DisclosureButton {
 
   showContent() {
     if (this.controlledNode) {
-      this.controlledNode.style.display = "block";
+      this.controlledNode.classList.remove("HideAwayTop");
+      this.controlledNode.classList.add("RevealInTop");
       this.buttonNode.children[0].style.display = "none";
       this.buttonNode.children[1].style.display = "block";
     }
@@ -106,7 +107,8 @@ class DisclosureButton {
 
   hideContent() {
     if (this.controlledNode) {
-      this.controlledNode.style.display = "none";
+      this.controlledNode.classList.remove("RevealInTop");
+      this.controlledNode.classList.add("HideAwayTop");
       this.buttonNode.children[0].style.display = "block";
       this.buttonNode.children[1].style.display = "none";
     }
@@ -135,6 +137,77 @@ class DisclosureButton {
   }
 }
 
+const animations = function () {
+  const heroContainerEl = document.querySelector(".hero__container");
+  const sectionTitleEls = document.querySelectorAll(".section-title");
+  const sectionSubtitleEls = document.querySelectorAll(".section-subtitle");
+  const hiwStepEls = document.querySelectorAll(".hiw__step");
+  const supporterEls = document.querySelectorAll(".supported-by__link");
+  const benefitEls = document.querySelectorAll(".benefit");
+  const faqEl = document.getElementsByClassName("faq");
+  const vw = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  let benefitDelay = [60, 300];
+  vw < 902 ? (benefitDelay = [0, 360]) : "";
+
+  ScrollReveal({ distance: "60px", duration: 1000, delay: 240, cleanup: true });
+
+  ScrollReveal().reveal(heroContainerEl.children[0], {
+    distance: "120px",
+    origin: "left",
+  });
+  ScrollReveal().reveal(heroContainerEl.children[1], {
+    distance: "120px",
+    origin: "right",
+  });
+  let titlesCount = 0;
+  sectionTitleEls.forEach((sectionTitle) => {
+    titlesCount++;
+    ScrollReveal().reveal(sectionTitle, {
+      delay: 90 * titlesCount,
+      origin: "bottom",
+    });
+  });
+  let subtitlesCount = 0;
+  sectionSubtitleEls.forEach((sectionSubtitle) => {
+    subtitlesCount++;
+    ScrollReveal().reveal(sectionSubtitle, {
+      delay: 120 * subtitlesCount,
+      origin: "bottom",
+    });
+  });
+  hiwStepEls.forEach((hiwStep) => {
+    ScrollReveal().reveal(hiwStep, {
+      origin: "bottom",
+    });
+  });
+  let supportersCount = 0;
+  supporterEls.forEach((supporter) => {
+    supportersCount++;
+    ScrollReveal().reveal(supporter, {
+      delay: supportersCount * 180 + 240,
+      distance: 0,
+    });
+  });
+  let benefitsCount = 0;
+  benefitEls.forEach((benefit) => {
+    benefitsCount++;
+    ScrollReveal().reveal(benefit, {
+      delay: benefitsCount * benefitDelay[0] + benefitDelay[1],
+      origin: "bottom",
+    });
+  });
+  ScrollReveal().reveal(faqEl, {
+    delay: 420,
+    origin: "bottom",
+  });
+};
+
+// Preloader
+const preloader = document.querySelector(".loader");
+
 window.addEventListener(
   "load",
   function () {
@@ -152,6 +225,14 @@ window.addEventListener(
     faqButtons.forEach((faqButton) => {
       new DisclosureButton(faqButton);
     });
+
+    // Animations
+    animations();
+
+    // Remove preloader
+    setTimeout(function () {
+      preloader.style.display = "none";
+    }, 100);
   },
   false
 );
